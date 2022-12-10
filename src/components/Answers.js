@@ -27,7 +27,9 @@ export default function Answers({ options = [], handleChange, input }) {
                   : null
               } `}
               text={option.title}
-              defaultChecked={option.checked}
+              defaultChecked={
+                  option.correct ? option.correct : option.checked
+                }
               disabled
             />
           )}
